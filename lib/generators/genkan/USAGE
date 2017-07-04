@@ -1,0 +1,9 @@
+Description:
+  Generates the necessary files to get you up and running with Genkan gem
+
+Examples:
+  rails generate genkan:install
+
+    This will generate the core migration file, the initializer file and the 'User' model class.
+
+  rails generate genkan:install --model AdminUser
