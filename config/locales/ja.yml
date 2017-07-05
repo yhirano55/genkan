@@ -1,0 +1,11 @@
+ja:
+  genkan:
+    sessions:
+      failure:    認証できません
+      required:   ログインが必要です
+      logged_in:  ログインしました
+      logged_out: ログアウトしました
+  errors:
+    messages:
+      not_accepted: 利用が許可されていません
+      banned:       指定したアカウントでは、ご利用いただけません
