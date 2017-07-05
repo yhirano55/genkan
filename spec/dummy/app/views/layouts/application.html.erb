@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if logged_in? %>
+      <p><%= link_to 'logout', genkan.logout_path %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
