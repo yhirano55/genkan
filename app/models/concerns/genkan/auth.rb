@@ -23,6 +23,10 @@ module Genkan
       store_last_logged_in_at
       increment_logged_in_count
       accept if Genkan.config.auto_acceptance?
+    end
+
+    def login!
+      login
       save!(context: :login)
     end
 

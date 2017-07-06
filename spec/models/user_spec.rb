@@ -88,7 +88,7 @@ RSpec.describe User do
     end
   end
 
-  describe '#login' do
+  describe '#login!' do
     let(:logged_in_count) { rand(1..20) }
     let(:user) { build :user, logged_in_count: logged_in_count }
 
@@ -96,7 +96,7 @@ RSpec.describe User do
       config = double(:config)
       allow(config).to receive(:auto_acceptance?).and_return(auto_acceptance)
       allow(Genkan).to receive(:config).and_return(config)
-      user.login
+      user.login!
     end
 
     context 'when auto_acceptance is true' do
