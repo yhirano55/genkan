@@ -44,7 +44,7 @@ module Genkan
     end
 
     def banned?
-      self.banned_at.present?
+      banned_at.present?
     end
 
     def ban
