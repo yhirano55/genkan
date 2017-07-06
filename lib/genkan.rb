@@ -1,5 +1,12 @@
+require "genkan/config"
 require "genkan/engine"
 
 module Genkan
-  # Your code goes here...
+  def self.configure
+    yield config
+  end
+
+  def self.config
+    @_config ||= Config.new
+  end
 end

@@ -1,0 +1,21 @@
+Genkan.configure do |config|
+  config.user_class_name = '<%= model_class_name %>'
+  config.auto_acceptance = false
+end
+
+Genkan::Engine.configure do |config|
+  # config.middleware.use OmniAuth::Builder do
+  #   # Add omniauth-google-oauth2 to Gemfile:
+  #   #   gem 'omniauth-google-oauth2'
+  #   provider(
+  #     :google_oauth2,
+  #     ENV['GOOGLE_OAUTH_CLIENT_ID'],
+  #     ENV['GOOGLE_OAUTH_CLIENT_SECRET'],
+  #     {
+  #       name:  'google',
+  #       scope: 'email',
+  #       hd:    'host-domain.com'
+  #     }
+  #   )
+  # end
+end

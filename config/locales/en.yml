@@ -1,0 +1,11 @@
+en:
+  genkan:
+    sessions:
+      failure:    Could not authenticated
+      required:   You need to login
+      logged_in:  Logged in successfully
+      logged_out: Logged out successfully
+  errors:
+    messages:
+      not_accepted: Your account is not accepted yet.
+      banned:       Your account is locked.
