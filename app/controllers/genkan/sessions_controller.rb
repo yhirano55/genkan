@@ -11,7 +11,7 @@ module Genkan
     def new; end
 
     def create
-      user.login
+      user.login!
       create_session
       redirect_to referer_or_root_path, notice: t('genkan.sessions.logged_in')
     end
