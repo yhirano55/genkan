@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    genkan (0.1.0)
-      rails
+    genkan (0.2.0)
+      rails (>= 5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -185,6 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 1.15)
   capybara
   database_cleaner
   factory_girl_rails
