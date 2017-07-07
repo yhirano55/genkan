@@ -1,5 +1,8 @@
 <img width="350" src="https://user-images.githubusercontent.com/15371677/27876034-6f54c860-61f0-11e7-8ebb-0623227ee491.png">
 
+[![Build Status](https://travis-ci.org/yhirano55/genkan.svg?branch=master)](https://travis-ci.org/yhirano55/genkan)
+[![Gem Version](https://badge.fury.io/rb/genkan.svg)](https://badge.fury.io/rb/genkan)
+
 Genkan is authentication engine for Rails
 
 ## Installation
@@ -40,7 +43,7 @@ Some setup you must do manually if you haven't yet:
   ```ruby
   Genkan.configure do |config|
     config.user_class_name = 'User'
-    config.auto_acceptance = false
+    config.auto_acceptance = true
   end
 
   Genkan::Engine.configure do |config|
