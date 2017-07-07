@@ -76,6 +76,15 @@ Some setup you must do manually if you haven't yet:
   <p class="alert"><%= alert %></p>
   ```
 
+4. Ensure you have set logout link in app/views/layouts/application.html.erb.
+   For example:
+
+  ```ruby
+  <% if logged_in? %>
+    <p><%= link_to "logout", genkan.logout_path %></p>
+  <% end %>
+  ```
+
 ## Debugging
 
 You can check on dummy server:
