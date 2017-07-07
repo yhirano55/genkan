@@ -25,6 +25,10 @@ module Genkan
         !!namespace
       end
 
+      def table_name_prefix
+        model_class_name.to_s.split("::")[0..-2].join("_").underscore.presence
+      end
+
       def model_name
         if namespaced?
           [namespace.to_s] + [model_class_name]

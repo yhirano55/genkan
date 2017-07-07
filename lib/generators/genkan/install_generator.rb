@@ -20,7 +20,7 @@ module Genkan
       end
 
       def prepare_migration
-        migration_template "migration.erb", "db/migrate/create_#{model_class_name.tableize}.rb", migration_class_name: migration_class_name
+        migration_template "migration.erb", "db/migrate/create_genkan_users.rb", migration_class_name: migration_class_name
       end
 
       def prepare_model

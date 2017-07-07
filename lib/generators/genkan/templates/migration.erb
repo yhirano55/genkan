@@ -1,6 +1,6 @@
-class Create<%= model_class_name.tableize.camelize %> < <%= migration_class_name %>
+class CreateGenkanUsers < <%= migration_class_name %>
   def change
-    create_table :<%= model_class_name.tableize %> do |t|
+    create_table :<%= model_class_name.tableize.tr('/', '_') %> do |t|
       t.string   :email,           null: false
       t.string   :remember_token,  null: false
       t.integer  :logged_in_count, null: false, default: 0
