@@ -42,8 +42,9 @@ Some setup you must do manually if you haven't yet:
 
   ```ruby
   Genkan.configure do |config|
-    config.user_class_name = 'User'
-    config.auto_acceptance = true
+    config.user_class_name   = 'User'
+    config.auto_acceptance   = true
+    config.cookie_expiration = 1.week
   end
 
   Genkan::Engine.configure do |config|

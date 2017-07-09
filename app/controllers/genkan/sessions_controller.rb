@@ -13,6 +13,7 @@ module Genkan
     def create
       user.login!
       create_session
+      create_encrypted_cookie
       redirect_to referer_or_root_path, notice: t('genkan.sessions.logged_in')
     end
 
@@ -37,6 +38,13 @@ module Genkan
 
     def create_session
       session[:remember_token] = user.remember_token
+    end
+
+    def create_encrypted_cookie
+      cookies.encrypted[:remember_token] = {
+        value:   user.remember_token,
+        expires: Time.current.since(Genkan.config.cookie_expiration),
+      }
     end
 
     def destroy_session

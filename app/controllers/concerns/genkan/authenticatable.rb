@@ -12,7 +12,7 @@ module Genkan
 
     def authenticate
       unless logged_in?
-        session[:referer] = request.fullpath
+        store_location
         redirect_to genkan.login_path, notice: t('genkan.sessions.required')
       end
     end
@@ -24,6 +24,10 @@ module Genkan
 
     def logged_in?
       send(current_user_method_name).present?
+    end
+
+    def store_location
+      session[:referer] = request.fullpath
     end
   end
 end
