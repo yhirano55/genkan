@@ -6,6 +6,7 @@ group :development, :test do
   gem 'sqlite3', platform: :mri
   gem 'omniauth-google-oauth2'
   gem 'pry'
+  gem 'onkcop', require: false
 end
 
 group :test do
