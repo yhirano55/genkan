@@ -1,7 +1,7 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Genkan do
-  describe '.configure' do
+  describe ".configure" do
     example do
       expect {
         described_class.configure do |config|
@@ -11,12 +11,12 @@ RSpec.describe Genkan do
     end
   end
 
-  describe '.config' do
+  describe ".config" do
     subject { described_class.config }
     it { is_expected.to be_an_instance_of Genkan::Config }
   end
 
-  describe 'version' do
+  describe "version" do
     subject { described_class::VERSION }
     it { is_expected.to be_a String }
   end

@@ -4,7 +4,8 @@ module Genkan
 
     included do
       private
-      delegate :user_class, :current_user_method_name, to: :class
+
+        delegate :user_class, :current_user_method_name, to: :class
     end
 
     class_methods do

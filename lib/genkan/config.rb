@@ -13,7 +13,7 @@ module Genkan
     end
 
     def current_user_method_name
-      @current_user_method_name ||= "current_#{user_class_name.underscore.tr('/', '_')}".freeze
+      @current_user_method_name ||= "current_#{user_class_name.underscore.tr("/", "_")}".freeze
     end
 
     def auto_acceptance?
