@@ -1,9 +1,9 @@
-require 'spec_helper'
-ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../dummy/config/environment', __FILE__)
-require 'rspec/rails'
-require 'capybara/rails'
-require 'capybara/rspec'
+require "spec_helper"
+ENV["RAILS_ENV"] ||= "test"
+require File.expand_path("../dummy/config/environment", __FILE__)
+require "rspec/rails"
+require "capybara/rails"
+require "capybara/rspec"
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
@@ -44,6 +44,6 @@ OmniAuth.config.test_mode = true
 
 def stub_omniauth(email: Faker::Internet.email)
   OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new(
-    "provider" => "google", "info" => { "email" => email }
+    "provider" => "google", "info" => { "email" => email },
   )
 end

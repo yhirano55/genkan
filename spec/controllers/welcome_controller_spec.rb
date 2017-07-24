@@ -1,7 +1,7 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe WelcomeController do
-  describe 'GET #index' do
+  describe "GET #index" do
     let(:user) { create :user }
 
     before do
@@ -9,14 +9,14 @@ RSpec.describe WelcomeController do
       get :index
     end
 
-    context 'with authenticated' do
+    context "with authenticated" do
       let(:enable_login_stub) { true }
 
       it { expect(response).to have_http_status(200) }
       it { expect(response).to render_template(:index) }
     end
 
-    context 'without authenticated' do
+    context "without authenticated" do
       let(:enable_login_stub) { false }
 
       it { expect(response).to have_http_status(302) }

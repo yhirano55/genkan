@@ -56,9 +56,10 @@ Some setup you must do manually if you haven't yet:
         ENV['GOOGLE_OAUTH_CLIENT_ID'],
         ENV['GOOGLE_OAUTH_CLIENT_SECRET'],
         {
-          name:  'google',
-          scope: 'email',
-          hd:    'host-domain.com'
+          name:       'google',
+          scope:      'email',
+          hd:         'host-domain.com',
+          verify_iss: false,
         }
       )
     end

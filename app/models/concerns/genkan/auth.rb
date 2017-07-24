@@ -58,21 +58,21 @@ module Genkan
 
     private
 
-    def store_last_logged_in_at
-      self.last_logged_in_at = Time.current
-    end
+      def store_last_logged_in_at
+        self.last_logged_in_at = Time.current
+      end
 
-    def increment_logged_in_count
-      self.logged_in_count ||= 0
-      self.logged_in_count += 1
-    end
+      def increment_logged_in_count
+        self.logged_in_count ||= 0
+        self.logged_in_count += 1
+      end
 
-    def ensure_record_has_accepted
-      errors.add(:base, :not_accepted) unless accepted?
-    end
+      def ensure_record_has_accepted
+        errors.add(:base, :not_accepted) unless accepted?
+      end
 
-    def ensure_record_has_not_banned
-      errors.add(:base, :banned) if banned?
-    end
+      def ensure_record_has_not_banned
+        errors.add(:base, :banned) if banned?
+      end
   end
 end
